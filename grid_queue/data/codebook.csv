@@ -1,0 +1,31 @@
+Field Name,Description,Notes
+q_id,queue position / ID number,"Combine with ""entity"" to form a unique identifier across the full dataset"
+q_status,current queue status ,"One of: active, withdrawn, suspended, or operational"
+q_date,interconnection request date (date project entered queue),
+prop_date,proposed online date from interconnection application,Proposed date can be revised during the interconnection process
+on_date,date project became operational (if applicable),
+wd_date,date project withdrawn from queue (if applicable),
+ia_date,date of signed interconnection agreement (if applicable),
+IA_phase_raw,non-standardized interconnection study phase / status from queue,
+IA_phase_clean,standardized interconnection study phase / status,"We impute ""IA Executed"" if q_status is ""operational"". One of: IA Executed, Withdrawn, System Impact Study, Feasibility Study, Facility Study, In Progress (unknown study), Cluster Study, IA Pending, Not Started, Construction, Suspended"
+county,county where project is located,"For requests spanning multiple counties, only the first listed county is included"
+state,state where project is located,
+fips_code,5-digit FIPS code,"Unique, standardized numeric codes to identify counties"
+poi_name,point of interconnection name,May be a substation name or transmission line tap
+region,standardized region where project is located ,One of: the 7 ISOs; and West (non-ISO) or Southeast (non-ISO)
+project_name,project name,Not available for most requests
+utility,utility name,"Same as ""entity"" in non-ISO/RTO balancing areas"
+entity,transmission provider entity name (ISO or utility),One of the 57 regions listed on the 01. Balancing Areas sheet
+developer,non-standardized project developer name,Not available for most requests
+cluster,queue cluster (if applicable),
+service,interconnection service type,"One of: NRIS, ERIS, NRIS/ERIS, or Other"
+project_type,type of project or interconnection request ,"One of: Generation, Surplus, Upgrade, or Replacement. Not all upgrades / uprates are identified"
+type_1,resource type 1,"One of: Solar, Wind, Battery, Gas, Hydro, Coal, Offshore Wind, Nuclear, Geothermal, Diesel, Oil, Hydrogen, Other Storage, Other"
+type_2,resource type 2,"If populated, indicates hybrid / co-located project"
+type_3,resource type 3,"If populated, indicates hybrid / co-located project"
+type_clean,resource type - standardized,"Combined resource types if hybrid/co-located (e.g., ""Solar+Battery"")"
+mw_1,capacity of type 1 (MW),Rated electric capacity of the generation or storage plant
+mw_2,capacity of type 2 (MW),The full report includes imputed storage capacity for hybrid and co-located generators where mw_2 and mw_3 values are missing. Those imputed values are excluded from the data reported here.
+mw_3,capacity of type 3 (MW),The full report includes imputed storage capacity for hybrid and co-located generators where mw_2 and mw_3 values are missing. Those imputed values are excluded from the data reported here.
+q_year,year project entered queue,Derived from q_date
+prop_year,proposed online year from interconnection application,Derived from prop_date

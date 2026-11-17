@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+pytest-cache-files-*/
+.tmp/
+/tmp*/
+build/
+*.whl
+system.txt
+schema.json
+answer.json
+mcp.json

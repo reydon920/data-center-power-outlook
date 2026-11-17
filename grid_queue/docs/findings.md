@@ -1,0 +1,15 @@
+# First snapshot: proposed capacity and observed delivery
+
+The source is Berkeley Lab and GridTracker's Queued Up 2026 data file, a December 31, 2025 snapshot. This memo describes the raw public request records processed by this project, not independent physical plants or a current queue forecast.
+
+There are 38,201 source rows: 24,221 withdrawn, 8,513 active, 4,789 operating, 668 suspended and 10 unknown. A withdrawn request is a recorded outcome; the data does not identify its cause. An active request is still waiting as of the snapshot and is not counted as a failure. A cohort's shares are calculated from all its known-year records, not just completed and withdrawn records.
+
+Of 4,789 operating rows, 3,098 have usable application and actual operating dates. Their combined median observed wait is 3.58 years. The other 1,691 operating rows lack a valid date pair or fail the date checks. The dashboard's annual wait chart groups completions by actual operating year and displays each sample count. This combined median is not a 2025-only figure, and the dated subset may not represent every provider.
+
+The active raw records contain approximately 1,312.2 GW of known generation capacity and 552.7 GW of known storage power. Missing capacity remains unknown and known parts of an incomplete hybrid still contribute. Berkeley Lab's report also estimates missing hybrid storage capacity; its approximately 749 GW storage headline uses information/imputations absent from the public project-level component fields. A proposed MW is not an operating MW, and storage power does not describe stored energy or duration.
+
+Quality checks found 665 rows without an application date/year, one missing or unassigned queue ID, and 270 rows participating in repeated provider/queue identifiers. There are also 54 exact repeated rows in the selected-field extract. Repeated selected fields do not prove the original full records are duplicates, and a repeated queue ID can refer to separate phases. All rows remain available, with source-row traceability and a warning that request counts are not unique plant counts.
+
+The count reconciliation compares all nine regions and three statuses to `02. Data Sample by Region`. It matches 26 of 27 cells. The exception is ERCOT active requests: 1,796 raw rows versus 1,527 in the summary. No verified reason is established here. This version reports the discrepancy and preserves the source records; it does not adjust the numbers to match a headline. Re-run `python -m queue_pipeline reconcile data/source.xlsx` after downloading the pinned workbook to inspect all checks.
+
+The practical operations lesson is to separate the size of a proposed backlog from completed output, state the denominator, and show how much information is missing. These records can support descriptive comparisons of generation interconnection queues. They cannot tell a data-center developer when a load will receive electricity, establish a project's completion probability, or measure the effect of a policy change.

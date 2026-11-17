@@ -1,0 +1,198 @@
+{
+  "sheet": "02. Data Sample by Region",
+  "snapshot_date": "2025-12-31",
+  "workbook_sha256": "794582d3281c6a305e9615fcfec3fae9dc85be2165216d33760b677e976a08b6",
+  "checks": [
+    {
+      "region": "CAISO",
+      "status": "active",
+      "summary_count": 432,
+      "raw_count": 432,
+      "difference": 0
+    },
+    {
+      "region": "CAISO",
+      "status": "operating",
+      "summary_count": 235,
+      "raw_count": 235,
+      "difference": 0
+    },
+    {
+      "region": "CAISO",
+      "status": "withdrawn",
+      "summary_count": 2200,
+      "raw_count": 2200,
+      "difference": 0
+    },
+    {
+      "region": "ERCOT",
+      "status": "active",
+      "summary_count": 1527,
+      "raw_count": 1796,
+      "difference": 269
+    },
+    {
+      "region": "ERCOT",
+      "status": "operating",
+      "summary_count": 613,
+      "raw_count": 613,
+      "difference": 0
+    },
+    {
+      "region": "ERCOT",
+      "status": "withdrawn",
+      "summary_count": 1158,
+      "raw_count": 1158,
+      "difference": 0
+    },
+    {
+      "region": "ISO-NE",
+      "status": "active",
+      "summary_count": 72,
+      "raw_count": 72,
+      "difference": 0
+    },
+    {
+      "region": "ISO-NE",
+      "status": "operating",
+      "summary_count": 228,
+      "raw_count": 228,
+      "difference": 0
+    },
+    {
+      "region": "ISO-NE",
+      "status": "withdrawn",
+      "summary_count": 982,
+      "raw_count": 982,
+      "difference": 0
+    },
+    {
+      "region": "MISO",
+      "status": "active",
+      "summary_count": 1646,
+      "raw_count": 1646,
+      "difference": 0
+    },
+    {
+      "region": "MISO",
+      "status": "operating",
+      "summary_count": 515,
+      "raw_count": 515,
+      "difference": 0
+    },
+    {
+      "region": "MISO",
+      "status": "withdrawn",
+      "summary_count": 3263,
+      "raw_count": 3263,
+      "difference": 0
+    },
+    {
+      "region": "NYISO",
+      "status": "active",
+      "summary_count": 190,
+      "raw_count": 190,
+      "difference": 0
+    },
+    {
+      "region": "NYISO",
+      "status": "operating",
+      "summary_count": 215,
+      "raw_count": 215,
+      "difference": 0
+    },
+    {
+      "region": "NYISO",
+      "status": "withdrawn",
+      "summary_count": 1531,
+      "raw_count": 1531,
+      "difference": 0
+    },
+    {
+      "region": "PJM",
+      "status": "active",
+      "summary_count": 1134,
+      "raw_count": 1134,
+      "difference": 0
+    },
+    {
+      "region": "PJM",
+      "status": "operating",
+      "summary_count": 1192,
+      "raw_count": 1192,
+      "difference": 0
+    },
+    {
+      "region": "PJM",
+      "status": "withdrawn",
+      "summary_count": 5226,
+      "raw_count": 5226,
+      "difference": 0
+    },
+    {
+      "region": "SPP",
+      "status": "active",
+      "summary_count": 683,
+      "raw_count": 683,
+      "difference": 0
+    },
+    {
+      "region": "SPP",
+      "status": "operating",
+      "summary_count": 299,
+      "raw_count": 299,
+      "difference": 0
+    },
+    {
+      "region": "SPP",
+      "status": "withdrawn",
+      "summary_count": 1846,
+      "raw_count": 1846,
+      "difference": 0
+    },
+    {
+      "region": "Southeast",
+      "status": "active",
+      "summary_count": 957,
+      "raw_count": 957,
+      "difference": 0
+    },
+    {
+      "region": "Southeast",
+      "status": "operating",
+      "summary_count": 529,
+      "raw_count": 529,
+      "difference": 0
+    },
+    {
+      "region": "Southeast",
+      "status": "withdrawn",
+      "summary_count": 2738,
+      "raw_count": 2738,
+      "difference": 0
+    },
+    {
+      "region": "West",
+      "status": "active",
+      "summary_count": 1603,
+      "raw_count": 1603,
+      "difference": 0
+    },
+    {
+      "region": "West",
+      "status": "operating",
+      "summary_count": 963,
+      "raw_count": 963,
+      "difference": 0
+    },
+    {
+      "region": "West",
+      "status": "withdrawn",
+      "summary_count": 5277,
+      "raw_count": 5277,
+      "difference": 0
+    }
+  ],
+  "mismatches": 1,
+  "note": "Differences are exposed, never patched. Summary methodology may differ; the ERCOT active discrepancy is unresolved in this version."
+}

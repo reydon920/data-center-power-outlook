@@ -1,0 +1,48 @@
+{
+  "source": "NASA POWER hourly T2M",
+  "units": "C",
+  "time_standard": "UTC",
+  "start": "2025010100",
+  "end_exclusive": "2026010100",
+  "sites": [
+    {
+      "id": "ashburn",
+      "name": "Ashburn",
+      "latitude": 39.0438,
+      "longitude": -77.4874
+    },
+    {
+      "id": "phoenix",
+      "name": "Phoenix",
+      "latitude": 33.4484,
+      "longitude": -112.074
+    },
+    {
+      "id": "sacramento",
+      "name": "Sacramento",
+      "latitude": 38.5816,
+      "longitude": -121.4944
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M&community=SB&latitude=39.0438&longitude=-77.4874&start=20250101&end=20251231&format=JSON&time-standard=UTC",
+      "retrieved_at": "2026-11-14T08:58:19.225572+00:00",
+      "response_sha256": "5336fe76df549ef1770085067c09d0b38552decd559c700faba974710e375067",
+      "site": "ashburn"
+    },
+    {
+      "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M&community=SB&latitude=33.4484&longitude=-112.074&start=20250101&end=20251231&format=JSON&time-standard=UTC",
+      "retrieved_at": "2026-11-14T08:58:24.477831+00:00",
+      "response_sha256": "dd6c59cfcd48e16934984d5c2a0e74daaf5078aa8c0134c4fcb2f16a1776d237",
+      "site": "phoenix"
+    },
+    {
+      "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M&community=SB&latitude=38.5816&longitude=-121.4944&start=20250101&end=20251231&format=JSON&time-standard=UTC",
+      "retrieved_at": "2026-11-14T08:58:25.603581+00:00",
+      "response_sha256": "8ea1a2d89657228c173b4214c5f65ed5f0f3004121c052dde813fd1822c211f0",
+      "site": "sacramento"
+    }
+  ],
+  "csv_sha256": "98721b6ab77a0fe9a7662358d3ae8b4c3c88fc81475658f021f952435898786a"
+}

@@ -1,0 +1,51 @@
+name: Offline checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  heat:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: heat
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m unittest -v
+      - run: python -m heat_exposure build --output docs/site
+      - run: python -m heat_exposure --showcase docs/showcase
+      - uses: actions/upload-artifact@v4
+        with:
+          name: heat-dashboard-and-reports
+          path: heat/docs/
+  grid-queue:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: grid_queue
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pytest -q
+      - run: python -m showcase --showcase docs/showcase
+  file-sizes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check tracked file sizes
+        run: python -c "import pathlib, subprocess; files=subprocess.check_output(['git','ls-files','-z']).decode().split('\0'); assert all(pathlib.Path(p).stat().st_size < 5_000_000 for p in files if p)"
