@@ -38,7 +38,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m streamlit run app.py
 ```
 
-On macOS/Linux use `.venv/bin/python` instead. GitHub Actions runs both test suites and rebuilds the reports on every push ([workflow](.github/workflows/check.yml)).
+Or run `python check.py` from the repository root to run both suites with each part's environment. On macOS/Linux use `.venv/bin/python` instead. GitHub Actions runs both test suites and rebuilds the reports on every push ([workflow](.github/workflows/check.yml)).
 
 ## Layout
 
